@@ -2,7 +2,7 @@
 
 This is my entire `Development Environment` setup in `Linux`, feel free to try it!
 
-### Prerequesites
+### 1. Prerequesites
 
 #### Main tools
 1. `wezterm` : Terminal Emulator
@@ -21,7 +21,7 @@ Note: I also recommend install those tools: `bat`, `lazydocker` (can be installe
 - Python
 
 
-### Installing steps
+### 2. Installing steps
 With stow you can create symlink from a directory to a target directory.
 So ideally, all settings shoul be in a directory, for example `~/dotfiles`
 
@@ -53,7 +53,7 @@ stow wezterm
 for more information about gnustow: [link](https://www.gnu.org/software/stow/)
 
 
-### Nvim setup
+### 3. Nvim setup
 
 - I use lazy to manage plugins, you can use packer
 - To sync or update plugins
