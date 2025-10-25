@@ -14,6 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require "haodm.options"
 require "haodm.keymaps"
-require "haodm.autocmds"
 require "haodm.toggleterm"
 require("lazy").setup("plugins")
