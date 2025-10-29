@@ -25,7 +25,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+-- keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -64,3 +64,22 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+--------------------------------------------------
+-- Diagnostics helpers (use new API)
+--------------------------------------------------
+
+vim.keymap.set("n", "<leader>ce", function()
+	local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line(".") - 1 })
+	if #diagnostics > 0 then
+		local message = diagnostics[1].message
+		vim.fn.setreg("+", message)
+		print("Copied diagnostic: " .. message)
+	else
+		print("No diagnostic at cursor")
+	end
+end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>ne", vim.diagnostic.goto_next, { noremap = true, silent = true }) -- next error
+vim.keymap.set("n", "<leader>pe", vim.diagnostic.goto_prev, { noremap = true, silent = true }) -- previous error
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true }) -- show diagnostic float
