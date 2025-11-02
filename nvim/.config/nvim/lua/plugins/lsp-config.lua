@@ -12,7 +12,7 @@ return {
         opts = {
             auto_install = true,
             -- manually install packages that do not exist in this list please
-            ensure_installed = { "zls", "ts_ls" },
+            ensure_installed = { "zls", "ts_ls", "gopls" },
         },
     },
     {
@@ -61,12 +61,18 @@ return {
                 capabilities = capabilities,
             }
 
+            -- go 
+            vim.lsp.config['gopls'] = {
+                capabilities = capabilities,
+            }
+
             vim.lsp.enable({
                 'ts_ls',
                 'zls',
                 'yamlls',
                 'docker_compose_language_service',
                 'pyright',
+                'gopls',
             })
             -- lsp kepmap setting
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
