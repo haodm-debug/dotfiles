@@ -66,6 +66,14 @@ return {
                 capabilities = capabilities,
             }
 
+            -- ✅ Add this after your LSP setups
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                pattern = "*.go",
+                callback = function()
+                    vim.lsp.buf.format({ async = false })
+                end,
+            })
+
             vim.lsp.enable({
                 'ts_ls',
                 'zls',

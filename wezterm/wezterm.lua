@@ -2,7 +2,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 ---colorscheme & theme
-config.color_scheme = "Tokyonight Night"
+-- config.color_scheme = "Tokyonight Night"
+config.color_scheme = "Tokyo Night AltSynt"
 config.bold_brightens_ansi_colors = "BrightAndBold"
 config.colors = {
     foreground = "#C0CAF5",
@@ -64,44 +65,45 @@ config.underline_position = -2.5
 config.underline_thickness = "2px"
 config.warn_about_missing_glyphs = false
 config.font = wezterm.font_with_fallback {
-    {
-      family = "FiraCode Nerd Font",
-      weight = "Regular",
-      harfbuzz_features = {
-        -- "cv01", ---styles: a
-        -- "cv02", ---styles: g
-        "cv06", ---styles: i (03..06)
-        -- "cv09", ---styles: l (07..10)
-        "cv12", ---styles: 0 (11..13, zero)
-        "cv14", ---styles: 3
-        "cv16", ---styles: * (15..16)
-        -- "cv17", ---styles: ~
-        -- "cv18", ---styles: %
-        -- "cv19", ---styles: <= (19..20)
-        -- "cv21", ---styles: =< (21..22)
-        -- "cv23", ---styles: >=
-        -- "cv24", ---styles: /=
-        "cv25", ---styles: .-
-        "cv26", ---styles: :-
-        -- "cv27", ---styles: []
-        "cv28", ---styles: {. .}
-        "cv29", ---styles: { }
-        -- "cv30", ---styles: |
-        "cv31", ---styles: ()
-        "cv32", ---styles: .=
-        -- "ss01", ---styles: r
-        -- "ss02", ---styles: <= >=
-        "ss03", ---styles: &
-        "ss04", ---styles: $
-        "ss05", ---styles: @
-        -- "ss06", ---styles: \\
-        "ss07", ---styles: =~ !~
-        -- "ss08", ---styles: == === != !==
-        "ss09", ---styles: >>= <<= ||= |=
-        -- "ss10", ---styles: Fl Tl fi fj fl ft
-        -- "onum", ---styles: 1234567890
-      },
-    },
+    {family = "JetBrains Mono"},
+    -- {
+    --   family = "FiraCode Nerd Font",
+    --   weight = "Regular",
+    --   harfbuzz_features = {
+    --     -- "cv01", ---styles: a
+    --     -- "cv02", ---styles: g
+    --     "cv06", ---styles: i (03..06)
+    --     -- "cv09", ---styles: l (07..10)
+    --     "cv12", ---styles: 0 (11..13, zero)
+    --     "cv14", ---styles: 3
+    --     "cv16", ---styles: * (15..16)
+    --     -- "cv17", ---styles: ~
+    --     -- "cv18", ---styles: %
+    --     -- "cv19", ---styles: <= (19..20)
+    --     -- "cv21", ---styles: =< (21..22)
+    --     -- "cv23", ---styles: >=
+    --     -- "cv24", ---styles: /=
+    --     "cv25", ---styles: .-
+    --     "cv26", ---styles: :-
+    --     -- "cv27", ---styles: []
+    --     "cv28", ---styles: {. .}
+    --     "cv29", ---styles: { }
+    --     -- "cv30", ---styles: |
+    --     "cv31", ---styles: ()
+    --     "cv32", ---styles: .=
+    --     -- "ss01", ---styles: r
+    --     -- "ss02", ---styles: <= >=
+    --     "ss03", ---styles: &
+    --     "ss04", ---styles: $
+    --     "ss05", ---styles: @
+    --     -- "ss06", ---styles: \\
+    --     "ss07", ---styles: =~ !~
+    --     -- "ss08", ---styles: == === != !==
+    --     "ss09", ---styles: >>= <<= ||= |=
+    --     -- "ss10", ---styles: Fl Tl fi fj fl ft
+    --     -- "onum", ---styles: 1234567890
+    --   },
+    -- },
     { family = "Noto Color Emoji" },
     { family = "LegacyComputing" },
   }
@@ -139,8 +141,8 @@ config.font_rules = {
   }
 
 ---char select and command palette
-config.font_size = 12
-config.char_select_font_size = 12
+config.font_size = 10
+config.char_select_font_size = 10
 config.command_palette_font_size = 12
 config.command_palette_rows = 20
 
@@ -178,7 +180,7 @@ config.integrated_title_button_style = "Windows"
 config.integrated_title_buttons = { "Hide", "Maximize", "Close" }
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.95
 
 ---exit behavior
 config.clean_exit_codes = { 130 }

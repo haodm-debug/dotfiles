@@ -41,7 +41,7 @@ return {
                 -- display the current git branch, git differences, and any code diagnostics in section b
                 lualine_b = { "branch", "diff", "diagnostics" },
                 -- display the filename in section c
-                lualine_c = { "filename" },
+                lualine_c = {{ "filename", path = 1 }},
                 -- display the file encoding type, os, and filetype in section x
                 lualine_x = { "encoding", "fileformat", "filetype" },
                 -- display where you are at in the file in section y
@@ -55,7 +55,7 @@ return {
                 lualine_a = {},
                 lualine_b = {},
                 -- display the file name in section c
-                lualine_c = { "filename" },
+                lualine_c = {{ "filename", path = 1 }},
                 -- display the exact location of the cursor in section x
                 lualine_x = { "location" },
                 -- display nothing in sections y and z
