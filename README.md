@@ -14,7 +14,7 @@ This is my entire `Development Environment` setup in `Linux`, feel free to try i
 Note: I also recommend install those tools: `bat`, `lazydocker` (can be installed by using your OS packet manager - `apt install` in my case).
 
 #### Fonts
-- Use fonts in `dotfiles/fonts/`
+- Use fonts in `dotfiles/fonts/` (Nerd Font and Jetbrains Mono)
 
 #### Programming languages
 - Java 21 
